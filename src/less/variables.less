@@ -1,10 +1,83 @@
-@screen-xs:                   480px;
+//screens
+
+@screen-xs:                   320px;
 @screen-sm:                   768px;
-@screen-md:                   992px;
-@screen-lg:                   1200px;
+@screen-md:                   1200px;
 @screen-xl:                   1920px;
 
-@text-color:                  #000;
+@max-phone:                   (@screen-sm - 1);
+@max-tablet:                   (@screen-md - 1);
 
-@font-family:                 'Open Sans_my', sans-serif;
-@font-size:                   14px;
+
+
+// Colors
+
+// Global bgc for body
+@body-bg:                     @white;
+// Global text color for body
+@text-color:                  @black;
+
+// grey colors
+@grey-darkest:                #191919;
+@grey-darken:                 #4c4c4c;
+@grey:                        #979696;
+@grey-lighten:                #ebebeb;
+@grey-lightest:               #fafafa;
+//
+@grey-form:                   #f1f1f1;
+
+
+// green colors
+@green-base:                  #0ab89d;
+@green-border:                #21ac9d;
+@green-darken:                #079b84;
+// orange colors
+@orange-base:                 #ff7435;
+@orange-darken:               #e85715;
+// bw
+@white:                       #fff;
+@black:                       #000;
+
+
+
+// Buttons
+
+@btn-bg: @orange-base;
+@btn-text-color: @white;
+@btn-font-size: 14px;
+@btn-border-radius: 20px;
+
+
+
+// Form
+// @input-fail:                  #e71818;
+// @input-success:               #0ab89d;
+
+
+
+// Typography
+
+@font-family:                  'Fira Sans', Arial, sans-serif;
+@font-family-h:                'PT Serif Caption', serif;
+
+@font-size-base:              16px;
+
+@font-size-big:               30px;
+
+@font-size-main-title:        36px;
+@font-size-title:             30px;
+@font-size-subtitle:          14px;
+@font-size-accent:            18px;
+@font-size-paragraph:         16px;
+@font-size-small:             14px;
+// line-height
+@lh-main-title:               42px;
+@lh-subtitle:                 18px;
+@lh-accent:                   24px;
+@lh-paragraph:                22px;
+@lh-small:                    22px;
+
+
+//StyleGuide
+@grey-guide:                  #959595;
+@fz-guide:                    15px;
