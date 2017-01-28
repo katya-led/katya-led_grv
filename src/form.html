@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
   @@include('_include/page-head.html')
-  <title>Form</title>
+  <title>Green Valley - бронирование и оплата</title>
 </head>
 <body>
   <header class="page-header">
     <div class="page-header__inner">
-      <a href="index.html" class="logo"><img class="logo__logo-icon" src="" alt="logo"></a>
+      <a href="index.html" class="logo"><img class="logo__logo-icon" src="img/logo.png" alt="logo"></a>
       <div class="main-nav">
         <nav id="menudown" class="main-nav__nav">
           <ul class="main-nav__list">
@@ -86,51 +86,57 @@
       <h2 class="booking-form__title">Тип коттеджа</h2>
         <div class="booking-form__cottage-types">
             
-            <input name="cottage-type" type="radio" value="flagman" checked>
+            <input name="cottage-type" type="radio" value="flagman" id="flagman" checked>
             <label class="booking-form__cottage-type  booking-form__cottage-type--active">флагман</label>
-            <input name="cottage-type" type="radio" value="ozerny">
+
+            <input name="cottage-type" type="radio" value="ozerny" id="ozerny">
             <label class="booking-form__cottage-type">озёрный</label>
-            <input name="cottage-type" type="radio" value="portovy">
+
+            <input name="cottage-type" type="radio" value="portovy" id="portovy">
             <label class="booking-form__cottage-type">портовый</label>
-            <input name="cottage-type" type="radio" value="olchovka">
+
+            <input name="cottage-type" type="radio" value="olchovka" id="olchovka">
             <label class="booking-form__cottage-type">ольховка</label>
+
+            <div class="booking-form__cottage-options  booking-form__cottage-options--active  booking-form__cottage--flagman">
+              <ul class="booking-form__cottage-options-list">
+                <li class="booking-form__option-squad">Площадь<br>100м&#178;</li>
+                <li class="booking-form__option-door">3 кomнаты</li>
+                <li class="booking-form__option-bed">5 спальных<br>мест</li>
+                <li class="booking-form__option-bath">раздельный<br>санузел</li>
+                <li class="booking-form__option-wi-fi">wi-fi</li>
+              </ul>
+            </div>
+            <div class="booking-form__cottage-options  booking-form__cottage--ozerny">
+              <ul class="booking-form__cottage-options-list">
+                <li class="booking-form__option-squad">Площадь<br>100м&#178;</li>
+                  <li class="booking-form__option-door">3 кomнаты</li>
+                  <li class="booking-form__option-bed">5 спальных<br>мест</li>
+                  <li class="booking-form__option-bath">совмещенный<br>санузел</li>
+                  <li class="booking-form__option-wi-fi">wi-fi</li>
+              </ul>
+            </div>
+            <div class="booking-form__cottage-options  booking-form__cottage--portovy">
+              <ul class="booking-form__cottage-options-list">
+                <li class="booking-form__option-squad">Площадь<br>100м&#178;</li>
+                  <li class="booking-form__option-door">3 кomнаты</li>
+                  <li class="booking-form__option-bed">5 спальных<br>мест</li>
+                  <li class="booking-form__option-bath">совмещенный<br>санузел</li>
+                  <li class="booking-form__option-wi-fi">wi-fi</li>
+              </ul>
+            </div>
+            <div class="booking-form__cottage-options  booking-form__cottage--olchovka">
+              <ul class="booking-form__cottage-options-list">
+                <li class="booking-form__option-squad">Площадь<br>100м&#178;</li>
+                  <li class="booking-form__option-door">3 кomнаты</li>
+                  <li class="booking-form__option-bed">5 спальных<br>мест</li>
+                  <li class="booking-form__option-bath">совмещенный<br>санузел</li>
+                  <li class="booking-form__option-wi-fi">wi-fi</li>
+              </ul>
+            </div>
         </div>
-        <div id="flagman" class="booking-form__cottage-options  booking-form__cottage-options--active">
-            <ul class="booking-form__cottage-options-list">
-              <li class="booking-form__option-squad">Площадь<br>100м&#178;</li>
-              <li class="booking-form__option-door">3 кomнаты</li>
-              <li class="booking-form__option-bed">5 спальных<br>мест</li>
-              <li class="booking-form__option-bath">раздельный<br>санузел</li>
-              <li class="booking-form__option-wi-fi">wi-fi</li>
-            </ul>
-        </div>
-        <div id="ozerny" class="booking-form__cottage-options">
-          <ul class="booking-form__cottage-options-list">
-            <li class="booking-form__option-squad">Площадь<br>100м&#178;</li>
-              <li class="booking-form__option-door">3 кomнаты</li>
-              <li class="booking-form__option-bed">5 спальных<br>мест</li>
-              <li class="booking-form__option-bath">совмещенный<br>санузел</li>
-              <li class="booking-form__option-wi-fi">wi-fi</li>
-          </ul>
-        </div>
-        <div id="portovy" class="booking-form__cottage-options">
-          <ul class="booking-form__cottage-options-list">
-            <li class="booking-form__option-squad">Площадь<br>100м&#178;</li>
-              <li class="booking-form__option-door">3 кomнаты</li>
-              <li class="booking-form__option-bed">5 спальных<br>мест</li>
-              <li class="booking-form__option-bath">совмещенный<br>санузел</li>
-              <li class="booking-form__option-wi-fi">wi-fi</li>
-          </ul>
-        </div>
-        <div id="olchovka" class="booking-form__cottage-options">
-          <ul class="booking-form__cottage-options-list">
-            <li class="booking-form__option-squad">Площадь<br>100м&#178;</li>
-              <li class="booking-form__option-door">3 кomнаты</li>
-              <li class="booking-form__option-bed">5 спальных<br>мест</li>
-              <li class="booking-form__option-bath">совмещенный<br>санузел</li>
-              <li class="booking-form__option-wi-fi">wi-fi</li>
-          </ul>
-        </div>
+        
+        
     </section>
 <!-- Шаг 4 -->
     <section class="booking-form__step">
