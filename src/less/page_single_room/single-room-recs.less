@@ -2,9 +2,7 @@
   background-color: #f6f6f6;
   padding-bottom: 53px;
   padding-top: 50px;
-//что делать с place-item бордер?
 
-//как меняются картинки в другом разрешении?
   &__item {
     background-color: @white;
   max-width: 280px;
@@ -13,9 +11,10 @@
   margin-bottom: 18px;
   border: 1px solid @grey-lighten;
   box-sizing: border-box;
-  }
-  &__item:last-child{
-    display: none;
+
+    &:last-child{
+      display: none;
+    }
   }
 
   &__wrapper {
@@ -57,9 +56,10 @@
     &__item {
       min-width: 352px;
       margin: 0 9px;
-    }
-    &__item:last-child{
-    display: none;
+
+      &:last-child{
+        display: none;
+      }
     }
     
     &__place-item {
@@ -67,6 +67,7 @@
       width: 100%;
       justify-content: center;
     }
+
     &__wrapper {
       min-width: 350px;
     }
@@ -83,16 +84,19 @@
     &__item {
       min-width: 352px;
       margin: 0 9px;
+
+      &:last-child{
+        display: block;
+      }
     }
-    &__item:last-child{
-    display: block;
-    }
+    
 
     &__place-item {
       display: flex;
       width: 100%;
       justify-content: center;
     }
+    
     &__wrapper {
       min-width: 350px;
     }
