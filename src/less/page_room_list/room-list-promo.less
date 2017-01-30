@@ -1,0 +1,84 @@
+.room-list-promo {
+  background-image: url('../img/room_list_promo_320.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 52px;
+  padding-bottom: 43px;
+
+  &__title {
+    text-align: center;
+    font-size: @font-size-big;
+    color: @white;
+    font-weight: 400;
+    letter-spacing: 2px;
+  }
+
+  &__description {
+    display: none;
+  }
+
+  &__text {
+    display: none;
+  }
+
+  @media (min-width: @screen-sm) and (max-width: @max-tablet){
+    background-image: url('../img/room_list_promo_768.jpg');
+
+    &__inner {
+      min-width: @screen-sm;
+      margin: 0 auto;
+    }
+
+    &__title{
+      margin-bottom: 35px;
+    }
+
+    &__description {
+      display: block;
+      color: @white;
+      font-size: 18px;
+      text-align: center;
+      margin-bottom: 8px;
+      letter-spacing: 1px;
+    }
+
+    &__text {
+      display: block;
+      color: @white;
+      font-size: 18px;
+      text-align: center;
+      margin: 0;
+      letter-spacing: 1px;
+    }
+  }
+  @media (min-width: @screen-md){
+    background-image: url('../img/room_list_promo_1200.jpg');
+
+    &__inner {
+      width: @screen-md;
+      margin: 0 auto;
+    }
+
+    &__title{
+      margin-bottom: 34px;
+    }
+
+    &__description {
+      display: block;
+      color: @white;
+      font-size: 18px;
+      text-align: center;
+      margin-bottom: 8px;
+      letter-spacing: 1px;
+    }
+    
+    &__text {
+      display: block;
+      color: @white;
+      font-size: 18px;
+      text-align: center;
+      margin: 0;
+      letter-spacing: 1px;
+    }
+  }
+}
