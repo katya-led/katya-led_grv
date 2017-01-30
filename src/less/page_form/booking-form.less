@@ -3,10 +3,12 @@
   &__step {
     padding-top: 50px;
     padding-bottom: 50px;
+
+    &:nth-child(2n+1) {
+      background-color: @grey-form;
+    }
   }
-  &__step:nth-child(2n+1) {
-    background-color: @grey-form;
-  }
+  
   &__step-number {
     text-transform: uppercase;
     font-size: @font-size-small;
@@ -28,6 +30,7 @@
     display: flex;
     flex-direction: column;
   }
+
   &__date {
     text-align: center;
     font-size: @font-size-small;
@@ -40,9 +43,11 @@
     margin: auto;
     margin-bottom: 40px;
   }
+
   &__date-wrapper {
     margin-top: 18px;
   }
+
   &__date-number {
     display: inline-block;
     text-align: center;
@@ -53,6 +58,7 @@
     font-size: @font-size-small;
     text-transform: uppercase;
   }
+
   @media (min-width: @screen-sm) and (max-width: @max-tablet){
     &__calendar {
       width: 380px;
@@ -60,6 +66,7 @@
       flex-direction: row;
     }
   }
+
   @media (min-width: @screen-md){
     &__calendar {
       width: 380px;
@@ -182,22 +189,8 @@
     margin: 0 auto;
     border: 1px solid @grey-lighten;
   }
-  // &__cottage-options--active {
-  //   display: none;
-  // }
 
-  #flagman:checked ~ .booking-form__cottage--flagman {
-    display: block;
-  }
-  #ozerny:checked ~ .booking-form__cottage--ozerny {
-    display: block;
-  }
-  #portovy:checked ~ .booking-form__cottage--portovy {
-    display: block;
-  }
-  #olchovka:checked ~ .booking-form__cottage--olchovka {
-    display: block;
-  }
+  
 
   &__cottage-options-list {
       display: flex;
@@ -214,16 +207,7 @@
         font-size: @font-size-small;
       }
   }
-  // &__cottage-options-list li {
-  //   position: relative;
-  //   width: 20%;
-  //   text-align: center;
-  //   list-style-type: none;
-  //   text-transform: uppercase;
-  //   font-weight: 500;
-  //   color: @grey-darkest;
-  //   font-size: @font-size-small;
-  // }
+
   &__option-squad:before {
       content: '';
       position: absolute;
@@ -234,6 +218,7 @@
       bottom: 50px;
       left: 37%;
     }
+
     &__option-door:before {
       content: '';
       position: absolute;
@@ -245,6 +230,7 @@
       bottom: 50px;
       left: 41%;
     }
+
     &__option-bed:before {
       content: '';
       position: absolute;
@@ -255,6 +241,7 @@
       bottom: 50px;
       left: 33%;
     }
+
     &__option-bath:before {
       content: '';
       position: absolute;
@@ -265,6 +252,7 @@
       bottom: 50px;
       left: 36%;
     }
+
     &__option-wi-fi:before {
       content: '';
       position: absolute;
@@ -275,7 +263,21 @@
       bottom: 50px;
       left: 36%;
     }
+
    @media (min-width: @screen-sm) and (max-width: @max-tablet){
+    #flagman:checked ~ .booking-form__cottage--flagman {
+    display: block;
+    }
+    #ozerny:checked ~ .booking-form__cottage--ozerny {
+      display: block;
+    }
+    #portovy:checked ~ .booking-form__cottage--portovy {
+      display: block;
+    }
+    #olchovka:checked ~ .booking-form__cottage--olchovka {
+      display: block;
+    }
+
     &__cottage-types {
       width: @screen-sm;
       flex-direction: row;
@@ -283,22 +285,35 @@
       padding-top: 45px;
       padding-bottom: 20px;
     }
+
     &__cottage-type {
       width: 25%;
     }
+
     &__cottage-type--active:before {
       left: 88px;
       top: 28px;
     }
-    // &__cottage-options--active {
-    //   display: block;
-    //   padding-top: 85px;
-    //   padding-bottom: 25px;
-    //   margin-top: 20px;
-    //   background-color: @white;
-    // }
+
+    &__cottage-options {
+      
+    }
+
   }
   @media (min-width: @screen-md){
+    #flagman:checked ~ .booking-form__cottage--flagman {
+    display: block;
+    }
+    #ozerny:checked ~ .booking-form__cottage--ozerny {
+      display: block;
+    }
+    #portovy:checked ~ .booking-form__cottage--portovy {
+      display: block;
+    }
+    #olchovka:checked ~ .booking-form__cottage--olchovka {
+      display: block;
+    }
+
     &__cottage-types {
       width: @screen-sm;
       flex-direction: row;
@@ -306,16 +321,15 @@
       padding-top: 45px;
       padding-bottom: 20px;
     }
+
     &__cottage-type {
       width: 25%;
     }
-    // &__cottage-options--active {
-    //   display: block;
-    //   padding-top: 85px;
-    //   padding-bottom: 25px;
-    //   margin-top: 20px;
-    //   background-color: @white;
-    // }
+
+    &__cottage-options {
+      
+    }
+
   }
 
 
@@ -459,6 +473,7 @@
     padding-top: 25px;
     padding-bottom: 23px;
     text-align: center;
+
       h3{
         font-family: @font-family;
         font-weight: 400;
@@ -466,23 +481,27 @@
         font-size: @font-size-small;
         color: @grey-darken;
       }
+
       p{
         font-size: @font-size-small;
         color: @grey-darken;
         font-weight: 400;
         
       }
+
       a{
         color: @grey-darken;
         text-decoration: none;
         border-bottom: 1px dashed @grey-darken;
       }
   }
+
   &__payment-sum-date{
     text-align: left;
     padding-left: 35px;
     padding-right: 35px;
   }
+
   @media (min-width: @screen-sm) and (max-width: @max-tablet){
     &__flex-wrapper {
       width: @screen-sm;
@@ -490,6 +509,7 @@
       display: flex;
       flex-direction: row-reverse;
     }
+
     &__payment-info {
       display: block;
       flex-basis: 70%;
@@ -498,15 +518,19 @@
       font-weight: normal;
       text-transform: none;
     }
+
     &__payment-type {
       flex-basis: 64%;
     }
+
     &__payment-item {
       border: 1px solid @grey-lighten;
+
+      &:last-child {
+        margin-bottom: 0px;
+      }
     }
-    &__payment-item:last-child {
-      margin-bottom: 0px;
-    }
+
     &__radio-wrapper-flex {
       display: flex;
       align-items: baseline;
@@ -516,6 +540,7 @@
       display: flex;
       justify-content: center;
     }
+
     &__payment-type-flex {
       width: 100%;
       margin: 0 15px;
@@ -524,9 +549,11 @@
           width: 250px;
         }
     }
+
     &__payment-type-flex:last-child input{
        width: 100px;
     }
+
     &__payment-sum {
       flex-basis: 36%;
       margin-right: 18px;
@@ -534,6 +561,7 @@
       border: 1px solid @grey-lighten;
     }
   }
+
   @media (min-width: @screen-md){
     &__flex-wrapper {
       width: @screen-sm;
@@ -541,6 +569,7 @@
       display: flex;
       flex-direction: row-reverse;
     }
+
     &__payment-info {
       display: block;
       flex-basis: 70%;
@@ -549,15 +578,19 @@
       font-weight: normal;
       text-transform: none;
     }
+
     &__payment-type {
       flex-basis: 64%;
     }
+
     &__payment-item {
       border: 1px solid @grey-lighten;
+
+      &:last-child {
+        margin-bottom: 0px;
+      }
     }
-    &__payment-item:last-child {
-      margin-bottom: 0px;
-    }
+
     &__radio-wrapper-flex {
       display: flex;
       align-items: baseline;
@@ -571,6 +604,7 @@
       display: flex;
       justify-content: center;
     }
+
     &__payment-type-flex {
       width: 100%;
       margin: 0 15px;
@@ -579,9 +613,11 @@
           width: 250px;
         }
     }
+
     &__payment-type-flex:last-child input{
        width: 100px;
     }
+
     &__payment-sum {
       flex-basis: 36%;
       margin-right: 18px;
@@ -598,16 +634,16 @@
         display: block;
       }
   }
+
   @media (min-width: @screen-sm) and (max-width: @max-tablet){
     &__payment-btn {
     width: @screen-sm;
-    
    }
   }
+
   @media (min-width: @screen-md){
     &__payment-btn {
     width: @screen-sm;
-    
    }
   }
 
