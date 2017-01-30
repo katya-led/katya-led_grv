@@ -1,0 +1,72 @@
+.place-item {
+    background-color: @white;
+    max-width: 280px;
+    margin: 0 auto;
+    padding-bottom: 38px;
+    margin-bottom: 18px;
+    border: 1px solid @green-border;
+    box-sizing: border-box;
+    
+  &__wrapper {
+    max-width: 280px;
+    overflow: hidden;
+  }
+
+  &__image{
+    max-width: 280px;
+  }
+
+  &__description {
+     text-align: center;
+     background-color: @white;
+     margin-top: 38px;
+   }
+
+  &__title{
+    font-size: 26px;
+    font-weight: normal;
+    line-height: 1.188rem;
+    letter-spacing: 1px;
+    color: @grey-darkest;
+    margin-bottom: 12px;
+   }
+
+  &__price {
+    font-size: @font-size-small;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+  
+  &__numbers {
+    font-size: 18px;
+    color: @orange-base;
+  }
+
+  @media (min-width: @screen-sm) and (max-width: @max-tablet) {
+
+    margin: 0 9px;
+    min-width: 352px;
+//с картинками как 
+    &__wrapper {
+      min-width: 350px;
+    }
+    &__image {
+      min-width: 350px;
+    }
+  
+  }
+  @media (min-width: @screen-md){
+    
+    margin: 0 9px;
+    min-width: 352px;
+//с картинками как 
+    &__wrapper {
+      min-width: 350px;
+    }
+
+    &__image {
+      min-width: 350px;
+    }
+  
+  }
+}

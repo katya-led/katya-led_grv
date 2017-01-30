@@ -1,0 +1,111 @@
+.reviews {
+  background-color: @green-base; //???
+  padding-top: 68px;
+  padding-bottom: 48px;
+    background-image: url('../../img/main_reviews_bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+  &__inner{
+    
+  }
+  &__title {
+    text-align: center;
+    font-size: 1.625rem;
+    color: @white;
+    font-weight: normal;
+    letter-spacing: 2px;
+  }
+  &__item {
+    max-width: 478px;
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
+    background-color: @white;
+    margin-top: 56px;
+    margin-bottom: 40px;
+    padding: 70px 40px 28px 40px;
+    box-sizing: border-box;
+  }
+  &__item:nth-child(n+3) {
+    display: none;
+  }
+  &__photo {
+    position: absolute;
+    box-sizing: border-box;
+    top: -25px;
+    left: 50%;
+    margin-left: -40px;
+    width: 80px;
+    height: 80px;
+    border: 2px solid @white;
+  }
+  &__name {
+    font-size: @font-size-small;
+    color: @black;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 1.125rem;
+    letter-spacing: 1px;
+  }
+  &__social {
+    margin-top: 8px;
+  }
+  &__text {
+    margin-top: 6px;
+    font-size: @font-size-base;
+    line-height: 1.375rem;
+  }
+  &__rest-text {
+    font-size: @font-size-small;
+    line-height: 1.125rem;
+    margin: 0;
+  }
+  &__rest-date {
+    font-size: @font-size-small;
+    line-height: 1.125rem;
+    margin: 0;
+  }
+  &__wrapper-button{
+    text-align: center;
+  }
+
+    // &___slide-wrapper{
+          
+    // }
+
+
+  @media (min-width: @screen-sm) and (max-width: @max-tablet){
+    background-image: url('../../img/main_reviews_bg_768.jpg');
+ 
+    &__inner{
+      width: 478px;
+      margin: 0 auto;
+   }
+    &__item {
+      width: 478px;
+      margin-right: 11px;
+      margin-left: 11px;
+    }
+    &__title{
+      font-size: @font-size-big;
+    }
+    
+  }
+  @media (min-width: @screen-md){
+    background-image: url('../../img/main_reviews_bg_1200.jpg');
+
+    &__inner {
+      width: 980px;
+      margin: 0 auto;
+    }
+    &__item {
+      margin-right: 11px;
+      margin-left: 11px;
+    }
+    &__item:nth-child(n+2) {
+    display: block;
+    }
+  }
+}
+

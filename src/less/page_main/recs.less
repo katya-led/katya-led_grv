@@ -1,0 +1,51 @@
+ .recs {
+  background-color: @green-base;
+  padding-top: 50px;
+  padding-bottom: 32px;
+  background: url('../../img/recs-bg_320.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+ 
+  &__title {
+    text-align: center;
+    font-size: @font-size-big;
+    font-weight: normal;
+    color: @white;
+    line-height: 2rem;
+    letter-spacing: 2px;
+    margin-top: 0;
+    margin-bottom: 35px;
+  }
+  @media (min-width: @screen-sm) and (max-width: @max-tablet){
+    background: url('../../img/recs-bg_768.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    &__title{
+      font-size: @font-size-big;
+    }
+    &__place-item {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+    }
+  }
+  @media (min-width: @screen-md){
+    background: url('../../img/recs-bg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    &__title{
+      font-size: @font-size-big;
+    }
+    &__place-item {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+    }
+  }
+}
