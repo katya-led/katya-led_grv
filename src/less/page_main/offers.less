@@ -1,0 +1,64 @@
+.offers {
+  padding-bottom: 80px;
+
+  &__title {
+    text-align: center;
+    font-size: 1.625rem;
+    font-weight: normal;
+    color: @black;
+    letter-spacing: 1px;
+    padding-top: 50px;
+    padding-bottom: 35px;
+  }
+
+  &__item{
+    padding-top: 130px;
+    background-image: url('../img/main_offers.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0 -40px;
+  }
+
+  &__item-description {
+    width: 297px;
+    background-color: #fff;
+    padding: 20px 5px 5px 20px;
+  }
+
+  &__item-title{
+    font-size: 1.125rem;
+    text-transform: uppercase;
+    color: @orange-base;
+  }
+
+  &__item-text{
+    line-height: 1.25rem;
+  }
+
+  @media (min-width: @screen-sm) and (max-width: @max-tablet){
+    &__inner {
+      min-width: @screen-sm;
+    }
+
+    &__item {
+      background-image: url('../img/main_offers_768.jpg');
+      background-position: 0 -20px;
+    }
+
+    &__title {
+      font-size: @font-size-big;
+    }
+  }
+  @media (min-width: @screen-md){
+    &__inner {
+      width: @screen-md;
+      margin: 0 auto;
+    }
+
+    &__item {
+      background-image: url('../img/main_offers_1200.jpg');
+      background-position: 0 0px;
+    }
+  }
+
+}

@@ -1,0 +1,142 @@
+.location {
+  padding-bottom: 50px;
+
+  &__route-option {
+    padding-top: 82px;
+    max-width: 230px;
+    text-align: center;
+    margin: 0 auto;
+    color: @grey-darkest;
+  }
+
+  &__inner {
+    margin-top: 40px;
+  }
+
+  &__title {
+    text-align: center;
+    font-size: 1.625rem;
+    font-weight: normal;
+    color: @grey-darkest;
+    letter-spacing: 2px;
+    margin-bottom: 34px;
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+
+  &__route-option-title {
+    position: relative;
+  }
+
+  &__bus {
+    &:before {
+      content: "";
+      position: absolute;
+      display: block;
+      top: -47px; 
+      left: 41%;
+      background-image: url('../img/sprites.png');
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      width: 50px;
+      height: 29px;
+    }
+  }
+
+  &__train {
+    &:before {
+      content: "";
+      position: absolute;
+      display: block;
+      top: -44px; 
+      left: 40%;
+      background-image: url('../img/sprites.png');
+      background-repeat: no-repeat;
+      background-position: -58px 0;
+      width: 58px;
+      height: 26px;
+    }
+  }
+
+  &__map {
+    width: 100%;
+
+    iframe {
+      width: 100%;
+      display: block;
+    }
+  }
+  
+  &__route-option-title {
+    font-size: @font-size-small;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  &__route-option-text {
+    font-size: @font-size-base;
+    line-height: 1.375rem;
+  }
+
+  @media (min-width: @screen-sm) and (max-width: @max-tablet){
+    &__route-option{
+      min-width: 720px;
+    }
+
+    &__route-option:last-child{
+      min-width: 400px;
+    }
+
+    &__title{
+      font-size: @font-size-big;
+    }
+
+    &__route-option-text{
+      margin: 0;
+    }
+
+    &__bus {
+      &:before { 
+        left: 335px;
+      }
+    }
+    &__train {
+      &:before {
+        left: 170px;
+      }
+    }
+  }
+  @media (min-width: @screen-md){
+    &__map{
+      width: 1180px;
+      margin: 0 auto;
+    }
+    &__wrapper{
+      max-width: 1180px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: row;
+      // justify-content: space-around;
+    }
+     &__route-option{
+      max-width: 400px;
+    }
+    &__title{
+      font-size: @font-size-big;
+    }
+    &__route-option-text{
+      margin: 0;
+      text-align: left;
+    }
+    &__bus {
+    &:before {
+      left: 174px;
+    }
+    }
+  &__train {
+    &:before {
+      left: 170px;
+    }
+  }
+}
+}

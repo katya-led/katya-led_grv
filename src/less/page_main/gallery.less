@@ -1,0 +1,26 @@
+.gallery{
+  
+  padding-bottom: 45px;
+  &__thumbs-carousel{
+    display: none;
+  }
+
+  @media (min-width: @screen-sm) and (max-width: @max-tablet){
+    padding-top: 30px;
+    &__thumbs-carousel{
+    display: block;
+    }
+  }
+
+  @media (min-width: @screen-md){
+    padding-top: 30px;
+
+    &__inner{
+      width: 1180px;
+      margin: 0 auto;
+    }
+    &__thumbs-carousel{
+    display: block;
+    }
+  }
+}
