@@ -139,6 +139,7 @@
 &__cottage-types {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     width: 100%;
     margin: 0 auto;
     text-align: center;
@@ -177,6 +178,8 @@
       li {
         position: relative;
         width: 20%;
+        padding-top: 20px;
+        padding-bottom: 10px;
         text-align: center;
         list-style-type: none;
         text-transform: uppercase;
@@ -317,28 +320,28 @@
    @media (min-width: @screen-sm) and (max-width: @max-tablet){
     #flagman:checked + .cottage-flagman {
       &:before {
-        left: 38px;
+        left: 82px;
         top: 25px;
       }
     }
 
     #ozerny:checked + .cottage-ozerny {
       &:before {
-        left: 38px;
+        left: 88px;
         top: 25px;
       }
     }
 
     #portovy:checked + .cottage-portovy {
       &:before {
-        left: 38px;
+        left: 86px;
         top: 25px;
       }
     }
 
     #olchovka:checked + .cottage-olchovka {
       &:before {
-        left: 40px;
+        left: 92px;
         top: 25px;
       }
     }
