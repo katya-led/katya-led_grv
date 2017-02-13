@@ -64,16 +64,16 @@
         <div class="booking-form__cottage-types">
             
             <input name="cottage-type" type="radio" value="flagman" id="flagman" checked>
-            <label class="booking-form__cottage-type  booking-form__cottage-type--active">флагман</label>
+            <label for="flagman" class="booking-form__cottage-type  cottage-flagman  booking-form__cottage-type--active">флагман</label>
 
             <input name="cottage-type" type="radio" value="ozerny" id="ozerny">
-            <label class="booking-form__cottage-type">озёрный</label>
+            <label for="ozerny" class="booking-form__cottage-type  cottage-ozerny">озёрный</label>
 
             <input name="cottage-type" type="radio" value="portovy" id="portovy">
-            <label class="booking-form__cottage-type">портовый</label>
+            <label for="portovy" class="booking-form__cottage-type  cottage-portovy">портовый</label>
 
             <input name="cottage-type" type="radio" value="olchovka" id="olchovka">
-            <label class="booking-form__cottage-type">ольховка</label>
+            <label for="olchovka" class="booking-form__cottage-type  cottage-olchovka">ольховка</label>
 
             <div class="booking-form__cottage-options  booking-form__cottage-options--active  booking-form__cottage--flagman">
               <ul class="booking-form__cottage-options-list">
@@ -87,8 +87,8 @@
             <div class="booking-form__cottage-options  booking-form__cottage--ozerny">
               <ul class="booking-form__cottage-options-list">
                 <li class="booking-form__option-squad">Площадь<br>100м&#178;</li>
-                  <li class="booking-form__option-door">3 кomнаты</li>
-                  <li class="booking-form__option-bed">5 спальных<br>мест</li>
+                  <li class="booking-form__option-door">4 кomнаты</li>
+                  <li class="booking-form__option-bed">8 спальных<br>мест</li>
                   <li class="booking-form__option-bath">совмещенный<br>санузел</li>
                   <li class="booking-form__option-wi-fi">wi-fi</li>
               </ul>
@@ -96,8 +96,8 @@
             <div class="booking-form__cottage-options  booking-form__cottage--portovy">
               <ul class="booking-form__cottage-options-list">
                 <li class="booking-form__option-squad">Площадь<br>100м&#178;</li>
-                  <li class="booking-form__option-door">3 кomнаты</li>
-                  <li class="booking-form__option-bed">5 спальных<br>мест</li>
+                  <li class="booking-form__option-door">5 кomнаты</li>
+                  <li class="booking-form__option-bed">10 спальных<br>мест</li>
                   <li class="booking-form__option-bath">совмещенный<br>санузел</li>
                   <li class="booking-form__option-wi-fi">wi-fi</li>
               </ul>
@@ -105,8 +105,8 @@
             <div class="booking-form__cottage-options  booking-form__cottage--olchovka">
               <ul class="booking-form__cottage-options-list">
                 <li class="booking-form__option-squad">Площадь<br>100м&#178;</li>
-                  <li class="booking-form__option-door">3 кomнаты</li>
-                  <li class="booking-form__option-bed">5 спальных<br>мест</li>
+                  <li class="booking-form__option-door">6 кomнаты</li>
+                  <li class="booking-form__option-bed">12 спальных<br>мест</li>
                   <li class="booking-form__option-bath">совмещенный<br>санузел</li>
                   <li class="booking-form__option-wi-fi">wi-fi</li>
               </ul>
@@ -150,13 +150,19 @@
       <div class="booking-form__payment-type">
         <div class="booking-form__payment-item">
           <div class="booking-form__radio-wrapper-flex">
-            <label for="#arrival" class="booking-form__payment-not-checked"><input id="arrival" name="payment-type" type="radio" value="arrival" checked>По приезду</label>
+
+            <input id="arrival" name="payment-type" type="radio" value="arrival">
+            <label for="#arrival" class="booking-form__payment-not-checked  label-arrival">По приезду</label>
+
             <span class="booking-form__payment-info">Вы можете произвести оплату по факту заселения</span>
           </div>
         </div>
         <div class="booking-form__payment-item  booking-form__payment-item--active">
             <div class="booking-form__radio-wrapper-flex">
-              <label for="#now" class="booking-form__payment-checked"><input id="now" name="payment-type" type="radio" value="now" checked>Сейчас</label>
+
+              <input id="now" name="payment-type" type="radio" value="now" checked>
+              <label for="#now" class="booking-form__payment-checked  label-now">Сейчас</label>
+              
               <span class="booking-form__payment-info">Прямо сейчас вы можете произвести оплату с помощью банковской карты</span>
             </div>
           <div id="pay-now" class="booking-form__payment-type-item">
