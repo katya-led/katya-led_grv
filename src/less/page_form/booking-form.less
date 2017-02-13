@@ -28,7 +28,7 @@
 // step1
   &__calendar {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; 
   }
 
   &__date {
@@ -507,59 +507,73 @@
     padding-bottom: 23px;
     margin-bottom: 20px;
     border: 1px solid @grey-lighten;
-      span {
-        display: none;
-      }
-      label {
-        text-transform: uppercase;
-        font-size: @font-size-small;
-        font-weight: 500;
-        color: @grey-darken;
-      }
+
+    label {
+      
+    }
   }
+
   &__radio-wrapper-flex {
     width: 280px;
     margin: 0 auto;
-    padding-bottom: 20px;
+    // padding-bottom: 20px;
 
-    input{
-      display: none;
+    @media (min-width: @screen-sm) and (max-width: @max-tablet){
+      width: auto;
+      display: flex;
+      justify-content: space-between;
+      padding: 0 20px;
     }
   }
 
+  &__arrival {
+    display: none;
 
-  #arrival:checked + .label-arrival {
-    position: relative;
+    &:checked + .booking-form__label-arrival {
+      position: relative;
 
-    &:before {
-      content: '';
-      display: block;
-      position: absolute;
-      width: 10px;
-      height: 6px;
-      border-left: 4px solid @green-base;
-      border-bottom: 4px solid @green-base;
-      transform: rotate(310deg);
-      left: 39px;
-      top: 22px;
+      &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 10px;
+        height: 6px;
+        border-left: 4px solid @green-base;
+        border-bottom: 4px solid @green-base;
+        transform: rotate(310deg) translateY(-50%);
+        left: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+      }
     }
   }
 
-  #now:checked + .label-now {
-    position: relative;
+  &__label-arrival {
+    text-transform: uppercase;
+    font-size: @font-size-small;
+    font-weight: 500;
+    color: @grey-darken;
+    padding-left: 30px;
+    flex-basis: 35%;
 
-    &:before {
-      content: '';
-      display: block;
-      position: absolute;
-      width: 10px;
-      height: 6px;
-      border-left: 4px solid @green-base;
-      border-bottom: 4px solid @green-base;
-      transform: rotate(310deg);
-      left: 39px;
-      top: 22px;
+    @media (min-width: @screen-sm) and (max-width: @max-tablet){
+
     }
+  }
+
+  &__payment-info {
+    display: none;
+
+    @media (min-width: @screen-sm) and (max-width: @max-tablet){
+      display: block;
+      flex-basis: 60%;
+      color: @grey-darken;
+      font-size: @font-size-small;
+      font-weight: normal;
+      text-transform: none;
+    }
+    
   }
 
   &__payment-type-flex {
@@ -628,15 +642,6 @@
       margin: 0 auto;
       display: flex;
       flex-direction: row-reverse;
-    }
-
-    &__payment-info {
-      display: block;
-      flex-basis: 70%;
-      color: @grey-darken;
-      font-size: @font-size-small;
-      font-weight: normal;
-      text-transform: none;
     }
 
     &__payment-type {

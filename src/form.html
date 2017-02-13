@@ -24,7 +24,7 @@
             <label>
               <span for="entry-day">Дата въезда</span>
                 <div class="booking-form__date-wrapper">
-                  <input id="entry-day" class="booking-form__date-number" name="calendar" placeholder="дд" type="number" maxlength="2">
+                  <input id="entry-day" class="booking-form__date-number" name="calendar" placeholder="дд" type="text" pattern="[0-9]{2}" maxlength="2">
                   <input id="entry-month" class="booking-form__date-number" name="calendar" placeholder="мм" maxlength="2">
                   <input id="entry-year" class="booking-form__date-number" name="calendar" placeholder="гггг" maxlength="4">
                 </div>
@@ -34,9 +34,9 @@
             <label>
               <span for="exit-day">Дата выезда</span>
               <div class="booking-form__date-wrapper">
-                <input id="exit-day" class="booking-form__date-number" name="calendar" placeholder="дд" type="text" pattern="[0-9]{,2}">
-                <input id="exit-month" class="booking-form__date-number" name="calendar" placeholder="мм" type="text" pattern="[0-9]{,2}">
-                <input id="exit-year" class="booking-form__date-number" name="calendar" placeholder="гггг" type="text" pattern="[0-9]{,4}">
+                <input id="exit-day" class="booking-form__date-number" name="calendar" placeholder="дд" type="text" pattern="[0-9]{2}">
+                <input id="exit-month" class="booking-form__date-number" name="calendar" placeholder="мм" type="text" pattern="[0-9]{2}">
+                <input id="exit-year" class="booking-form__date-number" name="calendar" placeholder="гггг" type="text" pattern="[0-9]{4}">
               </div>
             </label>
         </div>
@@ -141,7 +141,9 @@
       </div>
       
     </section>
-<!-- Шаг 5 -->
+
+
+  <!-- Шаг 5 -->
   <section class="booking-form__step">
     <h3 class="booking-form__step-number">Шаг 5</h3>
     <h2 class="booking-form__title">Способ оплаты</h2>
@@ -150,21 +152,17 @@
       <div class="booking-form__payment-type">
         <div class="booking-form__payment-item">
           <div class="booking-form__radio-wrapper-flex">
-
-            <input id="arrival" name="payment-type" type="radio" value="arrival">
-            <label for="#arrival" class="booking-form__payment-not-checked  label-arrival">По приезду</label>
-
+            <input class="booking-form__arrival" id="arrival" name="payment-type" type="radio" value="arrival">
+            <label for="arrival" class="booking-form__label-arrival">По приезду</label>
             <span class="booking-form__payment-info">Вы можете произвести оплату по факту заселения</span>
           </div>
         </div>
-        <div class="booking-form__payment-item  booking-form__payment-item--active">
-            <div class="booking-form__radio-wrapper-flex">
-
-              <input id="now" name="payment-type" type="radio" value="now" checked>
-              <label for="#now" class="booking-form__payment-checked  label-now">Сейчас</label>
-              
-              <span class="booking-form__payment-info">Прямо сейчас вы можете произвести оплату с помощью банковской карты</span>
-            </div>
+        <div class="booking-form__payment-item">
+          <div class="booking-form__radio-wrapper-flex">
+            <input class="booking-form__arrival" id="now" name="payment-type" type="radio" value="now" checked>
+            <label for="now" class="booking-form__label-arrival">Сейчас</label>
+            <span class="booking-form__payment-info">Прямо сейчас вы можете произвести оплату с помощью банковской карты</span>
+          </div>
           <div id="pay-now" class="booking-form__payment-type-item">
             <div class="booking-form__payment-type-flex">
               <label for="card-number">номер карты
@@ -195,7 +193,7 @@
       </div>
     </div>
     <div class="booking-form__payment-btn">
-        <a class="btn btn--bg-green btn--square">Забронировать</a>
+        <button class="btn btn--bg-green btn--square">Забронировать</button>
       </div>
   </section>
 
