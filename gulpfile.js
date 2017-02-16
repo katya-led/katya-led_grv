@@ -134,7 +134,7 @@ gulp.task('js', function () {
       dirs.source + '/js/jquery-3.1.1.min.js',
       dirs.source + '/js/jquery-migrate-1.4.1.min.js',
       dirs.source + '/js/slick.min.js',
-      dirs.source + '/js/jquery.fancybox.pack.js',
+      dirs.source + '/js/jquery.fancybox.js',
       dirs.source + '/js/script.js',
     ])
     .pipe(plumber({ errorHandler: onError }))
