@@ -151,7 +151,24 @@
     input {
       display: none;
     }
-   }
+
+    @media (min-width: @screen-sm) and (max-width: @max-tablet) {
+        width: @screen-sm;
+        flex-direction: row;
+        justify-content: center;
+        padding-top: 45px;
+        padding-bottom: 20px;
+    }
+
+    @media (min-width: @screen-md) {
+      width: @screen-sm;
+      flex-direction: row;
+      justify-content: center;
+      padding-top: 45px;
+      padding-bottom: 20px;
+    }
+
+  }
 
   &__cottage-type {
     max-width: 280px;
@@ -162,6 +179,14 @@
     font-size: @font-size-small;
     font-weight: 500;
     cursor: pointer;
+
+    @media (min-width: @screen-sm) and (max-width: @max-tablet) {
+      width: 25%;
+    }
+
+    @media (min-width: @screen-md) {
+      width: 25%;
+    }
   }
 
   &__cottage-options {
@@ -205,6 +230,20 @@
       left: -50px;
       top: 0px;
     }
+
+    @media (min-width: @screen-sm) and (max-width: @max-tablet) {
+      &:before {
+        left: 82px;
+        top: 25px;
+      }
+    }
+
+    @media (min-width: @screen-md) {
+      &:before {
+        left: 82px;
+        top: 25px;
+      }
+    }
   }
 
   #ozerny:checked + .cottage-ozerny {
@@ -222,6 +261,20 @@
       transform: rotate(310deg);
       left: -50px;
       top: 0px;
+    }
+
+    @media (min-width: @screen-sm) and (max-width: @max-tablet) {
+      &:before {
+        left: 88px;
+        top: 25px;
+      }
+    }
+
+    @media (min-width: @screen-md) {
+      &:before {
+        left: 88px;
+        top: 25px;
+      }
     }
   }
 
@@ -241,6 +294,20 @@
       left: -50px;
       top: 0px;
     }
+
+    @media (min-width: @screen-sm) and (max-width: @max-tablet) {
+      &:before {
+        left: 86px;
+        top: 25px;
+      }
+    }
+
+    @media (min-width: @screen-md) {
+      &:before {
+        left: 86px;
+        top: 25px;
+      }
+    }
   }
 
   #olchovka:checked + .cottage-olchovka {
@@ -258,6 +325,20 @@
       transform: rotate(310deg);
       left: -50px;
       top: 0px;
+    }
+
+    @media (min-width: @screen-sm) and (max-width: @max-tablet) {
+      &:before {
+        left: 92px;
+        top: 25px;
+      }
+    }
+
+    @media (min-width: @screen-md) {
+      &:before {
+        left: 92px;
+        top: 25px;
+      }
     }
   }
 
@@ -318,33 +399,6 @@
     }
 
    @media (min-width: @screen-sm) and (max-width: @max-tablet){
-    #flagman:checked + .cottage-flagman {
-      &:before {
-        left: 82px;
-        top: 25px;
-      }
-    }
-
-    #ozerny:checked + .cottage-ozerny {
-      &:before {
-        left: 88px;
-        top: 25px;
-      }
-    }
-
-    #portovy:checked + .cottage-portovy {
-      &:before {
-        left: 86px;
-        top: 25px;
-      }
-    }
-
-    #olchovka:checked + .cottage-olchovka {
-      &:before {
-        left: 92px;
-        top: 25px;
-      }
-    }
 
     #flagman:checked ~ .booking-form__cottage--flagman {
     display: block;
@@ -357,50 +411,11 @@
     }
     #olchovka:checked ~ .booking-form__cottage--olchovka {
       display: block;
-    }
-
-    &__cottage-types {
-      width: @screen-sm;
-      flex-direction: row;
-      justify-content: center;
-      padding-top: 45px;
-      padding-bottom: 20px;
-    }
-
-    &__cottage-type {
-      width: 25%;
     }
 
   }
 
   @media (min-width: @screen-md){
-    #flagman:checked + .cottage-flagman {
-      &:before {
-        left: 38px;
-        top: 25px;
-      }
-    }
-
-    #ozerny:checked + .cottage-ozerny {
-      &:before {
-        left: 38px;
-        top: 25px;
-      }
-    }
-
-    #portovy:checked + .cottage-portovy {
-      &:before {
-        left: 38px;
-        top: 25px;
-      }
-    }
-
-    #olchovka:checked + .cottage-olchovka {
-      &:before {
-        left: 40px;
-        top: 25px;
-      }
-    }
 
     #flagman:checked ~ .booking-form__cottage--flagman {
     display: block;
@@ -413,22 +428,6 @@
     }
     #olchovka:checked ~ .booking-form__cottage--olchovka {
       display: block;
-    }
-
-    &__cottage-types {
-      width: @screen-sm;
-      flex-direction: row;
-      justify-content: center;
-      padding-top: 45px;
-      padding-bottom: 20px;
-    }
-
-    &__cottage-type {
-      width: 25%;
-    }
-
-    &__cottage-options {
-      
     }
 
   }
@@ -456,12 +455,9 @@
       text-transform: uppercase;
       margin-bottom: 20px;
     }
-  }
 
-  @media (min-width: @screen-sm) and (max-width: @max-tablet){
-    &__personal-info {
+    @media (min-width: @screen-sm) and (max-width: @max-tablet) {
       width: 732px;
-      margin: 0 auto;
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
@@ -475,12 +471,11 @@
         display: block;
         width: 300px;
       }
+    
     }
-  }
-  @media (min-width: @screen-md){
-    &__personal-info {
+
+    @media (min-width: @screen-md) {
       width: 732px;
-      margin: 0 auto;
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
@@ -494,9 +489,9 @@
         display: block;
         width: 330px;
       }
+    
     }
   }
-
 
 
 // step5
@@ -507,22 +502,31 @@
     padding-bottom: 23px;
     margin-bottom: 20px;
     border: 1px solid @grey-lighten;
-
-    label {
-      
-    }
   }
 
   &__radio-wrapper-flex {
     width: 280px;
     margin: 0 auto;
-    // padding-bottom: 20px;
+    padding-bottom: 20px;
 
     @media (min-width: @screen-sm) and (max-width: @max-tablet){
       width: auto;
       display: flex;
       justify-content: space-between;
       padding: 0 20px;
+      align-items: baseline;
+    }
+
+    @media (min-width: @screen-md) {
+      width: auto;
+      display: flex;
+      justify-content: space-between;
+      padding: 0 20px;
+      align-items: baseline;
+
+      label {
+        flex-basis: 30%;
+      }
     }
   }
 
@@ -556,10 +560,6 @@
     color: @grey-darken;
     padding-left: 30px;
     flex-basis: 35%;
-
-    @media (min-width: @screen-sm) and (max-width: @max-tablet){
-
-    }
   }
 
   &__payment-info {
@@ -574,6 +574,14 @@
       text-transform: none;
     }
     
+    @media (min-width: @screen-md) {
+      display: block;
+      flex-basis: 60%;
+      color: @grey-darken;
+      font-size: @font-size-small;
+      font-weight: normal;
+      text-transform: none;
+    }
   }
 
   &__payment-type-flex {
@@ -659,11 +667,6 @@
         display: block;
       }
     }
-
-    &__radio-wrapper-flex {
-      display: flex;
-      align-items: baseline;
-    }
   
     &__payment-type-item{
       display: flex;
@@ -699,14 +702,7 @@
       flex-direction: row-reverse;
     }
 
-    &__payment-info {
-      display: block;
-      flex-basis: 70%;
-      color: @grey-darken;
-      font-size: @font-size-small;
-      font-weight: normal;
-      text-transform: none;
-    }
+   
 
     &__payment-type {
       flex-basis: 64%;
@@ -721,15 +717,6 @@
 
       span {
         display: block;
-      }
-    }
-
-    &__radio-wrapper-flex {
-      display: flex;
-      align-items: baseline;
-
-      label {
-        flex-basis: 30%;
       }
     }
     
@@ -771,12 +758,20 @@
   @media (min-width: @screen-sm) and (max-width: @max-tablet){
     &__payment-btn {
     width: @screen-sm;
+
+      button {
+        width: 100%;
+      }
    }
   }
 
   @media (min-width: @screen-md){
     &__payment-btn {
     width: @screen-sm;
+
+    button {
+        width: 100%;
+      }
    }
   }
 
