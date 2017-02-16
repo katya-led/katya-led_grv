@@ -134,6 +134,7 @@ $(window).on('scroll', function() {
   $('.single-item').slick({
     arrows: true
   });
+  $('.single-room__fancybox').fancybox();
 
 });
 
