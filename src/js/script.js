@@ -136,5 +136,15 @@ $(window).on('scroll', function() {
   });
   $('.single-room__fancybox').fancybox();
 
+// form masked input
+
+    $("#entry-day").mask("99");
+    $("#entry-month").mask("99");
+    $("#entry-year").mask("9999");
+    $("#exit-day").mask("99");
+    $("#exit-month").mask("99");
+    $("#exit-year").mask("9999");
+
+
 });
 
