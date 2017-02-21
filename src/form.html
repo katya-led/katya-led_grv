@@ -24,9 +24,9 @@
             <label>
               <span for="entry-day">Дата въезда</span>
                 <div class="booking-form__date-wrapper">
-                  <input id="entry-day" class="booking-form__date-number" name="calendar" placeholder="дд" type="text">
-                  <input id="entry-month" class="booking-form__date-number" name="calendar" placeholder="мм"  type="text">
-                  <input id="entry-year" class="booking-form__date-number" name="calendar" placeholder="гггг"  type="text">
+                  <input id="entry-day" class="booking-form__date-number" name="calendar" placeholder="дд" type="number"  min="1" max="31" data-validation="number" data-validation-error-msg="Введите день въезда">
+                  <input id="entry-month" class="booking-form__date-number" name="calendar" placeholder="мм"  type="number"  min="1" max="12" name="entry-month" data-validation="number" data-validation-error-msg="Введите месяц въезда">
+                  <input id="entry-year" class="booking-form__date-number" name="calendar" placeholder="гггг"  type="number" min="2017" max="2019"  data-validation="number" data-validation-error-msg="Введите год въезда">
                 </div>
             </label>
         </div>
@@ -34,9 +34,9 @@
             <label>
               <span for="exit-day">Дата выезда</span>
               <div class="booking-form__date-wrapper">
-                <input id="exit-day" class="booking-form__date-number" name="calendar" placeholder="дд" type="text">
-                <input id="exit-month" class="booking-form__date-number" name="calendar" placeholder="мм" type="text">
-                <input id="exit-year" class="booking-form__date-number" name="calendar" placeholder="гггг" type="text">
+                <input id="exit-day" class="booking-form__date-number" name="calendar" placeholder="дд" type="text"  min="1" max="31"  data-validation="number" data-validation-error-msg="Введите день выезда">
+                <input id="exit-month" class="booking-form__date-number" name="calendar" placeholder="мм" type="text"  min="1" max="12"  data-validation="number" data-validation-error-msg="Введите месяц выезда">
+                <input id="exit-year" class="booking-form__date-number" name="calendar" placeholder="гггг" type="text" min="2017" max="2019" data-validation="number" data-validation-error-msg="Введите год выезда">
               </div>
             </label>
         </div>
@@ -122,19 +122,19 @@
       <div class="booking-form__personal-info">
         
           <label for="personal-info-name" class="booking-form__personal-info-name">
-            <input id="personal-info-name"  type="text" placeholder="Имя" pattern="[А-Яа-яЁё]">
+            <input id="personal-info-name"  type="text" placeholder="Имя"  data-validation="required" data-validation-error-msg="Введите имя">
           </label>
           <label for="personal-info-lastname" class="booking-form__personal-info-lastname">
-            <input id="personal-info-lastname"  type="text" placeholder="Фамилия" pattern="[А-Яа-яЁё]">
+            <input id="personal-info-lastname"  type="text" placeholder="Фамилия"  data-validation="required" data-validation-error-msg="Введите фамилию">
           </label>
         
         
           <label for="personal-info-phone" class="booking-form__personal-info-phone">
-            <input id="personal-info-phone" type="tel" placeholder="Номер телефона">
+            <input id="personal-info-phone" type="tel" placeholder="Номер телефона"  data-validation="number" data-validation-error-msg="Введите телефон">
             <span>Мы свяжемся с вами в случае необходимости.</span>
           </label>
           <label for="personal-info-email" class="booking-form__personal-info-email">
-            <input id="personal-info-email" type="email" placeholder="E-mail" pattern="\D [^0-9]">
+            <input id="personal-info-email" type="email" placeholder="E-mail" pattern="\D [^0-9]"  data-validation="email" data-validation-error-msg="Введите E-mail">
             <span>На этот адрес мы вышлем вам подтверждение о забронированном номере.</span>
           </label>
 
@@ -166,18 +166,18 @@
           <div id="pay-now" class="booking-form__payment-type-item">
             <div class="booking-form__payment-type-flex">
               <label for="card-number">номер карты
-                <input id="card-number" type="text" placeholder="0000-0000-0000-0000">
+                <input id="card-number" type="text" placeholder="0000-0000-0000-0000"  data-validation="number" data-validation-error-msg="Введите номер карты">
               </label>
               <label for="#card-name">фамилия владельца карты
-                <input id="card-name"  type="text" placeholder="vladimir vladimirov" pattern="[A-Za-z]">
+                <input id="card-name"  type="text" placeholder="vladimir vladimirov"  data-validation="required"  data-validation-error-msg="Введите имя владельца карты">
               </label>
             </div>
             <div class="booking-form__payment-type-flex">
               <label for="cvv">код cvv
-                <input id="cvv" class="last" type="text" placeholder="123">
+                <input id="cvv" class="last" type="text" placeholder="123" data-validation="required"  data-validation-error-msg="Введите CVV">
               </label>
               <label for="card-valid">действует до
-                <input id="card-valid"  name="calendar" type="text" placeholder="01 / 2018">
+                <input id="card-valid"  name="calendar" type="text" placeholder="01 / 2018"  data-validation="required" data-validation-error-msg="Введите период действия карты" >
               </label>
             </div>
           </div>
@@ -188,12 +188,12 @@
         <div class="booking-form__payment-sum-success"></div>
         <div class="booking-form__payment-sum-error--active">
           <p>-</p>
-          <p class="booking-form__payment-sum-date">Пожалуйста, <a href="#date">выберите дату</a> въезда и выезда, чтобы увидеть сумму к оплате</p>
+          <p  id="booking-form__payment-sum-err-msg" class="booking-form__payment-sum-err-msg">Пожалуйста, <a href="#date">выберите дату</a> въезда и выезда, чтобы увидеть сумму к оплате</p>
         </div>
       </div>
     </div>
     <div class="booking-form__payment-btn">
-      <button class="btn btn--bg-green btn--square">Забронировать</button>
+      <button type="submit" class="btn btn--bg-green btn--square">Забронировать</button>
     </div>
   </section>
 

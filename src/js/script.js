@@ -150,5 +150,21 @@ $(window).on('scroll', function() {
     $("#card-number").mask("0000-0000-0000-0000");
     $("#cvv").mask("000");
     $("#card-valid").mask("00 / 0000");
+
+// form validation
+  $.validate({
+    form: '#booking-form',
+    scrollToTopOnError : false,
+
+  //   submitErrorMessageCallback: function($form, errorMessages, config) {
+  //   // Return an element that should contain all error messages.
+  //   // This callback will be called when errorMessagePosition is set to 'top'
+  // }
+    errorMessagePosition : $('#booking-form__payment-sum-err-msg'),
+    
+    validateOnBlur : false,
+    addSuggestions : false
+  });
+
 });
 

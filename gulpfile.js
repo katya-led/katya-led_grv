@@ -136,6 +136,7 @@ gulp.task('js', function () {
       dirs.source + '/js/slick.min.js',
       dirs.source + '/js/jquery.fancybox.js',
       dirs.source + '/js/jquery.mask.min.js',
+      dirs.source + '/js/jquery.form-validator.min.js',
       dirs.source + '/js/script.js',
     ])
     .pipe(plumber({ errorHandler: onError }))

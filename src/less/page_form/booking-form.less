@@ -641,7 +641,7 @@
       }
   }
 
-  &__payment-sum-date{
+  &__payment-sum-err-msg{
     text-align: left;
     padding-left: 35px;
     padding-right: 35px;
@@ -753,28 +753,22 @@
     width: 280px;
     margin: 0 auto;
     margin-top: 50px;
-      a {
-        display: block;
+    
+      button {
+        width: 100%;
+        cursor: pointer;
       }
   }
 
   @media (min-width: @screen-sm) and (max-width: @max-tablet){
     &__payment-btn {
     width: @screen-sm;
-
-      button {
-        width: 100%;
-      }
    }
   }
 
   @media (min-width: @screen-md){
     &__payment-btn {
     width: @screen-sm;
-
-    button {
-        width: 100%;
-      }
    }
   }
 
