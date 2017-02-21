@@ -75,7 +75,7 @@
             <input name="cottage-type" type="radio" value="olchovka" id="olchovka">
             <label for="olchovka" class="booking-form__cottage-type  cottage-olchovka">ольховка</label>
 
-            <div class="booking-form__cottage-options  booking-form__cottage-options--active  booking-form__cottage--flagman">
+            <div class="booking-form__cottage-options  booking-form__cottage--flagman">
               <ul class="booking-form__cottage-options-list">
                 <li class="booking-form__option-squad">Площадь<br>100м&#178;</li>
                 <li class="booking-form__option-door">6 кomнаты</li>
@@ -122,10 +122,10 @@
       <div class="booking-form__personal-info">
         
           <label for="personal-info-name" class="booking-form__personal-info-name">
-            <input id="personal-info-name"  type="text" placeholder="Имя" pattern="[A-Za-zА-Яа-яЁё]{1,25}">
+            <input id="personal-info-name"  type="text" placeholder="Имя" pattern="[А-Яа-яЁё]">
           </label>
           <label for="personal-info-lastname" class="booking-form__personal-info-lastname">
-            <input id="personal-info-lastname"  type="text" placeholder="Фамилия" pattern="[A-Za-zА-Яа-яЁё]">
+            <input id="personal-info-lastname"  type="text" placeholder="Фамилия" pattern="[А-Яа-яЁё]">
           </label>
         
         
@@ -134,7 +134,7 @@
             <span>Мы свяжемся с вами в случае необходимости.</span>
           </label>
           <label for="personal-info-email" class="booking-form__personal-info-email">
-            <input id="personal-info-email" type="email" placeholder="E-mail">
+            <input id="personal-info-email" type="email" placeholder="E-mail" pattern="\D [^0-9]">
             <span>На этот адрес мы вышлем вам подтверждение о забронированном номере.</span>
           </label>
 
@@ -169,7 +169,7 @@
                 <input id="card-number" type="text" placeholder="0000-0000-0000-0000">
               </label>
               <label for="#card-name">фамилия владельца карты
-                <input id="card-name"  type="text" placeholder="vladimir vladimirov">
+                <input id="card-name"  type="text" placeholder="vladimir vladimirov" pattern="[A-Za-z]">
               </label>
             </div>
             <div class="booking-form__payment-type-flex">

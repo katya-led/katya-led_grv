@@ -137,14 +137,18 @@ $(window).on('scroll', function() {
   $('.single-room__fancybox').fancybox();
 
 // form masked input
-
-    $("#entry-day").mask("99");
-    $("#entry-month").mask("99");
-    $("#entry-year").mask("9999");
-    $("#exit-day").mask("99");
-    $("#exit-month").mask("99");
-    $("#exit-year").mask("9999");
-
-
+//step1
+    $("#entry-day").mask("00");
+    $("#entry-month").mask("00");
+    $("#entry-year").mask("0000");
+    $("#exit-day").mask("00");
+    $("#exit-month").mask("00");
+    $("#exit-year").mask("0000");
+//step4
+    $("#personal-info-phone").mask("+7(000) 000-00-00");
+//step5
+    $("#card-number").mask("0000-0000-0000-0000");
+    $("#cvv").mask("000");
+    $("#card-valid").mask("00 / 0000");
 });
 
