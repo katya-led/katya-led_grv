@@ -6,100 +6,81 @@
   &__inner {
     width: @screen-xs;
     margin: 0 auto;
+
+    @media (min-width: @screen-sm) and (max-width: @max-tablet){
+      min-width: @screen-sm;
+      display: flex;
+      align-items: center;
+    }
+
+    @media (min-width: @screen-md) {
+      width: @screen-md;
+      display: flex;
+      align-items: center;
+    }
   }
 
   &__logo-socials {
     text-align: center;
+
+    @media (min-width: @screen-sm) and (max-width: @max-tablet) {
+      flex-grow: 1;
+    }
+    @media (min-width: @screen-md) {
+      flex-grow: 1;
+    }
   }
+
   &__socials {
       margin-top: 10px;
   }
+  
   &__socials-link {
+      display: inline-block;
       padding-left: 17px;
       padding-right: 17px;
   }
 
   &__address {
     display: none;
+
+    width: 150px;
+    color: @grey-darkest;
+    font-size: 14px;
+    line-height: 1.125em;
+
+    @media (min-width: @screen-sm) and (max-width: @max-tablet) {
+      display: block;
+    }
+    @media (min-width: @screen-md) {
+      display: block;
+    }
   }
 
   &__contacts {
     display: none;
-  }
 
-    @media (min-width: @screen-sm) and (max-width: @max-tablet){
+    width: 150px;
+    font-size: 14px;
+    line-height: 1.125em;
 
-    &__inner {
-      min-width: @screen-sm;
-      display: flex;
-      align-items: center;
-    }
-
-    &__address {
+    @media (min-width: @screen-sm) and (max-width: @max-tablet) {
       display: block;
-      width: 150px;
-      color: @grey-darkest;
-      font-size: 14px;
-      line-height: 1.125em;
     }
-
-    &__logo-socials{
-      flex-grow: 1;
-    }
-
-    &__contacts {
+    @media (min-width: @screen-md) {
       display: block;
-      width: 150px;
-      font-size: 14px;
-      line-height: 1.125em;
-    }
-
-    &__phone-link{
-      text-decoration: none;
-      color: @grey-darkest;
-    }
-
-    &__mail-link{
-      text-decoration: none;
-      color: @grey-darkest;
     }
   }
 
-  @media (min-width: @screen-md){
-    &__inner {
-      width: @screen-md;
-      display: flex;
-      align-items: center;
-    }
-
-    &__address {
-      display: block;
-      width: 150px;
-      color: @grey-darkest;
-      font-size: 14px;
-      line-height: 1.125em;
-    }
-
-    &__logo-socials{
-      flex-grow: 1;
-    }
-
-    &__contacts {
-      display: block;
-      width: 150px;
-      font-size: 14px;
-      line-height: 1.125em;
-    }
-
-    &__phone-link{
+      &__phone-link {
       text-decoration: none;
       color: @grey-darkest;
     }
 
-    &__mail-link{
+    &__mail-link {
       text-decoration: none;
       color: @grey-darkest;
     }
-  }
+
 }
 
