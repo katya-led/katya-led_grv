@@ -639,6 +639,20 @@
         text-decoration: none;
         border-bottom: 1px dashed @grey-darken;
       }
+
+      @media (min-width: @screen-sm) and (max-width: @max-tablet) {
+        flex-basis: 36%;
+        margin-right: 18px;
+        padding-bottom: 0;
+        border: 1px solid @grey-lighten;
+      }
+
+      @media (min-width: @screen-md) {
+        flex-basis: 36%;
+        margin-right: 18px;
+        padding-bottom: 0;
+        border: 1px solid @grey-lighten;
+      }
   }
 
   &__payment-sum-err-msg{
@@ -689,12 +703,6 @@
        width: 100px;
     }
 
-    &__payment-sum {
-      flex-basis: 36%;
-      margin-right: 18px;
-      padding-bottom: 0;
-      border: 1px solid @grey-lighten;
-    }
   }
 
   @media (min-width: @screen-md){
@@ -741,12 +749,6 @@
        width: 100px;
     }
 
-    &__payment-sum {
-      flex-basis: 36%;
-      margin-right: 18px;
-      padding-bottom: 0;
-      border: 1px solid @grey-lighten;
-    }
   }
 
   &__payment-btn {
@@ -758,18 +760,28 @@
         width: 100%;
         cursor: pointer;
       }
+
+      @media (min-width: @screen-sm) and (max-width: @max-tablet) {
+        width: @screen-sm;
+      }
+
+      @media (min-width: @screen-md) {
+        width: @screen-sm;
+      }
   }
 
-  @media (min-width: @screen-sm) and (max-width: @max-tablet){
-    &__payment-btn {
-    width: @screen-sm;
-   }
+  .error {
+    background-image: url('../img/form-check-incorrect.png');
+    background-repeat: no-repeat;
+    background-position: 6px center;
+    background-size: 13px 13px;
   }
 
-  @media (min-width: @screen-md){
-    &__payment-btn {
-    width: @screen-sm;
-   }
+  .valid {
+    background-image: url('../img/form-check-valid.png');
+    background-repeat: no-repeat;
+    background-position: 6px center;
+    background-size: 16px 12px;
   }
 
 }

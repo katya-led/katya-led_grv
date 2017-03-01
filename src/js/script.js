@@ -149,7 +149,7 @@ $(window).on('scroll', function() {
 //step5
     $("#card-number").mask("0000-0000-0000-0000");
     $("#cvv").mask("000");
-    $("#card-valid").mask("00 / 0000");
+    $("#card-valid").mask("00/0000");
 
 // form validation
   $.validate({
