@@ -505,6 +505,28 @@
     padding-bottom: 23px;
     margin-bottom: 20px;
     border: 1px solid @grey-lighten;
+
+    @media (min-width: @screen-sm) and (max-width: @max-tablet) {
+
+      &:last-child {
+        margin-bottom: 0px;
+      }
+
+      span {
+        display: block;
+      }
+    }
+
+    @media (min-width: @screen-md) {
+
+      &:last-child {
+        margin-bottom: 0px;
+      }
+
+      span {
+        display: block;
+      }
+    }
   }
 
   &__radio-wrapper-flex {
@@ -608,6 +630,32 @@
       margin-top: 15px;
       margin-bottom: 20px;
     }
+
+    @media (min-width: @screen-sm) and (max-width: @max-tablet) {
+      width: 100%;
+      margin: 0 15px;
+
+        input {
+          width: 250px;
+        }
+
+        &:last-child input {
+          width: 100px;
+        }
+    }
+
+    @media (min-width: @screen-md) {
+      width: 100%;
+      margin: 0 15px;
+      
+        input {
+          width: 250px;
+        }
+
+        &:last-child input {
+          width: 100px;
+        }
+    }
   }
   
   
@@ -662,6 +710,7 @@
   }
 
   @media (min-width: @screen-sm) and (max-width: @max-tablet){
+    
     &__flex-wrapper {
       width: @screen-sm;
       margin: 0 auto;
@@ -673,39 +722,15 @@
       flex-basis: 64%;
     }
 
-    &__payment-item {
-      border: 1px solid @grey-lighten;
-
-      &:last-child {
-        margin-bottom: 0px;
-      }
-
-      span {
-        display: block;
-      }
-    }
-  
     &__payment-type-item{
       display: flex;
       justify-content: center;
-    }
-
-    &__payment-type-flex {
-      width: 100%;
-      margin: 0 15px;
-
-        input {
-          width: 250px;
-        }
-    }
-
-    &__payment-type-flex:last-child input{
-       width: 100px;
     }
 
   }
 
   @media (min-width: @screen-md){
+
     &__flex-wrapper {
       width: @screen-sm;
       margin: 0 auto;
@@ -713,40 +738,13 @@
       flex-direction: row-reverse;
     }
 
-   
-
     &__payment-type {
       flex-basis: 64%;
     }
 
-    &__payment-item {
-      border: 1px solid @grey-lighten;
-
-      &:last-child {
-        margin-bottom: 0px;
-      }
-
-      span {
-        display: block;
-      }
-    }
-    
     &__payment-type-item{
       display: flex;
       justify-content: center;
-    }
-
-    &__payment-type-flex {
-      width: 100%;
-      margin: 0 15px;
-      
-        input {
-          width: 250px;
-        }
-    }
-
-    &__payment-type-flex:last-child input{
-       width: 100px;
     }
 
   }
