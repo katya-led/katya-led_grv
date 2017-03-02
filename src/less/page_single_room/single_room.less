@@ -3,6 +3,16 @@
   &__inner {
     padding-top: 50px;
     padding-bottom: 50px;
+
+    @media (min-width: @screen-sm) and (max-width: @max-tablet) {
+      min-width: @screen-sm;
+      margin: 0 auto;
+    }
+
+    @media (min-width: @screen-md) {
+      width: @screen-md;
+      margin: 0 auto;
+    }
   }
 
   &__title {
@@ -21,8 +31,13 @@
     color: @grey-darkest;
     margin-bottom: 30px;
     margin-top: 10px;
+
     span{
       color: @orange-base;
+    }
+
+    @media (min-width: @screen-sm) and (max-width: @max-tablet) {
+      
     }
   }
 
@@ -160,10 +175,6 @@
   }
 
   @media (min-width: @screen-sm) and (max-width: @max-tablet){
-    &__inner {
-      min-width: @screen-sm;
-      margin: 0 auto;
-    }
 
     &__price{
       margin-bottom: 50px;
@@ -183,10 +194,6 @@
   }
 
   @media (min-width: @screen-md){
-    &__inner {
-      width: @screen-md;
-      margin: 0 auto;
-    }
 
     &__wrapper {
       display: flex;
